@@ -64,6 +64,7 @@ dependencies {
     implementation(libs.ktor.client.android)
     implementation("io.ktor:ktor-client-content-negotiation:2.3.11")
     implementation(libs.ktor.serialization.kotlinx.json)
+    implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
