@@ -10,6 +10,8 @@ activityCompose = "1.9.0"
 composeBom = "2023.08.00"
 ktor = "2.3.11"
 navigationCompose = "2.7.7"
+lifecycleRuntimeComposeAndroid = "2.8.2"
+lifecycleRuntimeComposeDesktop = "2.8.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -29,6 +31,8 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
+androidx-lifecycle-runtime-compose-desktop = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-desktop", version.ref = "lifecycleRuntimeComposeDesktop" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

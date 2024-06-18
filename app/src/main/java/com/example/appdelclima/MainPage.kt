@@ -6,10 +6,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.istea.appdelclima.presentacion.ciudades.CiudadesPage
-import com.istea.appdelclima.presentacion.clima.ClimaPage
-import com.istea.appdelclima.router.Enrutador
-import com.istea.appdelclima.router.Ruta
+import com.example.appdelclima.muestra.ciudades.CiudadesPage
+import com.example.appdelclima.muestra.clima.ClimaPage
+import com.example.appdelclima.router.Ruta
+
 
 @Composable
 fun MainPage() {

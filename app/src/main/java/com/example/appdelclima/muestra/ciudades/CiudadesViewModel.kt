@@ -8,8 +8,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.appdelclima.repository.Repositorio
 import com.example.appdelclima.repository.modelos.Ciudad
-import com.istea.appdelclima.router.Router
-import com.istea.appdelclima.router.Ruta
+import com.example.appdelclima.router.Router
+import com.example.appdelclima.router.Ruta
 import kotlinx.coroutines.launch
 
 class CiudadesViewModel(
