@@ -14,7 +14,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import com.example.appdelclima.ui.theme.AppDelClimaTheme
 
-
 @Composable
 fun ClimaView(
     modifier: Modifier = Modifier,
@@ -29,7 +28,7 @@ fun ClimaView(
         modifier = modifier
             .fillMaxWidth()
             .fillMaxHeight()
-            .background(Color(0xFFBBDEFB))
+            .background(Color(0xFF81C784))
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -46,13 +45,8 @@ fun ClimaView(
             ClimaEstado.Cargando -> EmptyView()
         }
         Spacer(modifier = Modifier.height(20.dp))
-
-
-        Text(text = "Volver atrás")
-
-
+        Text(text = "Volver atrás", color = Color.White)
         Spacer(modifier = Modifier.height(100.dp))
-
     }
 }
 
@@ -61,16 +55,18 @@ fun EmptyView() {
     Text(
         text = "No hay nada que mostrar",
         style = MaterialTheme.typography.bodyLarge,
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,
+        color = Color.White
     )
 }
 
 @Composable
 fun LoadingView() {
     Text(
-        text = "Cargando",
+        text = "Cargando...",
         style = MaterialTheme.typography.bodyLarge,
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,
+        color = Color.White
     )
 }
 
@@ -92,25 +88,29 @@ fun ClimaContentView(ciudad: String, temperatura: Double, descripcion: String, s
         Text(
             text = ciudad,
             style = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            color = Color.White
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "${temperatura}°",
             style = MaterialTheme.typography.displayLarge,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            color = Color.White
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = descripcion,
             style = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.Medium
+            fontWeight = FontWeight.Medium,
+            color = Color.White
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "Sensación térmica: ${st}°",
             style = MaterialTheme.typography.bodyMedium,
-            fontWeight = FontWeight.Medium
+            fontWeight = FontWeight.Medium,
+            color = Color.White
         )
         Spacer(modifier = Modifier.height(16.dp))
     }
@@ -128,7 +128,7 @@ fun ClimaPreviewVacio() {
 @Composable
 fun ClimaPreviewError() {
     AppDelClimaTheme {
-        ClimaView(state = ClimaEstado.Error("Se rompió todo"), onAction = {})
+        ClimaView(state = ClimaEstado.Error("Se rompió"), onAction = {})
     }
 }
 
@@ -136,6 +136,6 @@ fun ClimaPreviewError() {
 @Composable
 fun ClimaPreviewExitoso() {
     AppDelClimaTheme {
-        ClimaView(state = ClimaEstado.Exitoso(ciudad = "Mendoza", temperatura = 20.0, descripcion = "Soleado", st = 22.0), onAction = {})
+        ClimaView(state = ClimaEstado.Exitoso(ciudad = "Jujuy", temperatura = 31.0, descripcion = "Nublado con sol", st = 34.0), onAction = {})
     }
 }
