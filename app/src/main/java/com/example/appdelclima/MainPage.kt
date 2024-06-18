@@ -9,7 +9,7 @@ import com.example.appdelclima.ui.theme.AppDelClimaTheme
 @Composable
 fun MainPage(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello!",
+        text = "Hola como estas!",
         modifier = modifier
     )
 }
