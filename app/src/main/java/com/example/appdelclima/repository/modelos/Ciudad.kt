@@ -1,4 +1,4 @@
-package com.example.appdelclima.muestra.ciudades
+package com.example.appdelclima.repository.modelos
 
 import kotlinx.serialization.Serializable
 
